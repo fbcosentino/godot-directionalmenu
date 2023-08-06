@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/directional_menu/scenes/MenuItem/MenuItem.gd" type="Script" id=1]
+
+[node name="MenuItem" type="ReferenceRect"]
+margin_right = 160.0
+margin_bottom = 64.0
+script = ExtResource( 1 )

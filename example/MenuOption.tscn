@@ -1,0 +1,264 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://example/arrow_up.png" type="Texture" id=1]
+[ext_resource path="res://example/MenuOption.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0784314, 0.0745098, 0.0745098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.45098, 0.45098, 0.45098, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.219608, 0.196078, 0.12549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.45098, 0.45098, 0.45098, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="MenuOption" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+rect_clip_content = true
+custom_styles/panel = SubResource( 1 )
+
+[node name="PanelHighlight" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+rect_clip_content = true
+custom_styles/panel = SubResource( 2 )
+
+[node name="LabelName" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -59.5
+margin_top = -16.0
+margin_right = 11.5
+margin_bottom = -2.0
+text = "Item name"
+
+[node name="LabelSomething" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -58.9999
+margin_top = 1.00003
+margin_right = 68.0001
+margin_bottom = 32.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "Lorem ipsum 
+select me please"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -17.0
+margin_right = 57.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="HintUp" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = -16.0
+margin_right = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="HintUp"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintDown" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -8.0
+margin_right = 8.0
+margin_bottom = 16.0
+
+[node name="TextureRect" type="TextureRect" parent="HintDown"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 10.0
+margin_bottom = 10.0
+rect_rotation = 180.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintLeft" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -8.0
+margin_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="HintLeft"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 14.0
+margin_right = -2.0
+margin_bottom = 10.0
+rect_rotation = -90.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintRight" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -8.0
+margin_right = 16.0
+margin_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="HintRight"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 2.0
+margin_right = 10.0
+margin_bottom = -2.0
+rect_rotation = 90.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintRightBottom" type="Panel" parent="."]
+margin_right = 32.0
+margin_bottom = 16.0
+
+[node name="TextureRect" type="TextureRect" parent="HintRightBottom"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 14.0
+rect_rotation = 90.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="HintRightBottom"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 26.0
+margin_bottom = 26.0
+rect_rotation = 180.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintRightTop" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+margin_right = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="HintRightTop"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 14.0
+rect_rotation = 90.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="HintRightTop"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintLeftTop" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -16.0
+
+[node name="TextureRect" type="TextureRect" parent="HintLeftTop"]
+margin_left = 2.0
+margin_top = 14.0
+margin_right = 14.0
+margin_bottom = 26.0
+rect_rotation = -90.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="HintLeftTop"]
+margin_left = 18.0
+margin_top = 2.0
+margin_right = 30.0
+margin_bottom = 14.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="HintLeftBottom" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -32.0
+margin_bottom = 16.0
+
+[node name="TextureRect" type="TextureRect" parent="HintLeftBottom"]
+margin_left = 2.0
+margin_top = 14.0
+margin_right = 14.0
+margin_bottom = 26.0
+rect_rotation = -90.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="HintLeftBottom"]
+margin_left = 30.0
+margin_top = 14.0
+margin_right = 42.0
+margin_bottom = 26.0
+rect_rotation = 180.0
+texture = ExtResource( 1 )
+expand = true
